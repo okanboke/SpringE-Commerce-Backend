@@ -30,7 +30,6 @@ public class UserService {
         this.productRepository = productRepository;
     }
 
-
     public List<User> getAllUsers() {                   //repository'e bağlanıp userları çeker.
         return userRepository.findAll();
     }

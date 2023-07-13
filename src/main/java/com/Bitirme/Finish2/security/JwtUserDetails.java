@@ -36,7 +36,6 @@ public class JwtUserDetails implements UserDetails {
         return new JwtUserDetails(user.getId(), user.getUserName(), user.getPassword(), authoritiesList);
     }
 
-
     @Override
     public boolean isAccountNonExpired() {
         return true;

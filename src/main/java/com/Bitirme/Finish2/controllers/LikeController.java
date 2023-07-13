@@ -33,7 +33,6 @@ public class LikeController {
                                           @RequestParam Optional<Long> productId) {
         return likeService.getAllLikesWithParam(userId, productId);
     }
-
     @PostMapping
     public Like createOneLike(@RequestBody LikeCreateRequest request) {
         return likeService.createOneLike(request);

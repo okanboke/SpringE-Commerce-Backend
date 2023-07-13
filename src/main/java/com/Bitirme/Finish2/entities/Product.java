@@ -27,7 +27,6 @@ public class Product {
     @OnDelete(action = OnDeleteAction.CASCADE) //Bir user silindiğinde onun bütün ürünleri silinmeli.
     User user;
 
-
     float price;
     String title;
     String image;

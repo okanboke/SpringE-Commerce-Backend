@@ -10,13 +10,11 @@ import com.Bitirme.Finish2.responses.ProductResponse2;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
 import com.Bitirme.Finish2.entities.Product;
 import com.Bitirme.Finish2.requests.ProductCreateRequest;
 import com.Bitirme.Finish2.requests.ProductUpdateRequest;
 import com.Bitirme.Finish2.responses.ProductResponse;
 import com.Bitirme.Finish2.services.ProductService;
-
 
 @RestController
 @RequestMapping("/products")
@@ -38,14 +36,12 @@ public class ProductController {
             @RequestParam Optional<Long> userId) { //requestparam ile userların tüm ürünleri çekme virgül koyarak birden fazla parse edebiliriz
         return productService.getAllProducts(userId);
     }
-
     @PostMapping
     public Product createOneProduct(
             @RequestBody ProductCreateRequest newProductRequest
             /*,
             @ModelAttribute String categories*/) { //yeni bir ürün ekleme
         return productService.createOneProduct(newProductRequest/*,categories*/);
-
     }
 
     @GetMapping("/{productId}")

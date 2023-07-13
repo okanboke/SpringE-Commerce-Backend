@@ -22,15 +22,12 @@ import com.Bitirme.Finish2.responses.ProductResponse;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.client.ResourceAccessException;
 
-
 @Service
 public class ProductService {
 
     private ProductRepository productRepository;
     private UserService userService; //ürün eklerken kontrol yapmak için kullanıcı servisinden yapacağız
     private LikeService likeService;
-
-
     private CategoryRepository categoryRepository;
 
     private CategoryService categoryService;
@@ -47,9 +44,6 @@ public class ProductService {
     public void setLikeService(LikeService likeService) {
         this.likeService = likeService;
     }
-
-
-
     public List<ProductResponse2> getAllProducts(Optional<Long> userId) { //controllerdan parse eder jpa ile tüm ürünleri çeker
         List<Product> list; //product listesini database den çekiyoruz
 
@@ -98,8 +92,6 @@ public class ProductService {
         toSave.setCreateDate(new Date()); //ürün eklenme zamanı
 
         //catReq.setCategoryName(newProductRequest.getCategoryName());
-
-
         return productRepository.save(toSave);
 
         //repoya gidip yeni post ekleyecek

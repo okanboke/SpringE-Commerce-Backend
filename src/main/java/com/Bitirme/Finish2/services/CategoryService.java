@@ -17,9 +17,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class CategoryService {
-
     private CategoryRepository categoryRepository;
-
 
     public CategoryService(CategoryRepository categoryRepository) {
         this.categoryRepository = categoryRepository;
@@ -29,7 +27,6 @@ public class CategoryService {
         return categoryRepository.findAll();
 
     }
-
 /*
     public List<CategoryResponse> getAllCategoryParam(Optional<Long> categoryId) {
         List<Category> list;
@@ -42,7 +39,6 @@ public class CategoryService {
 
     }*/
 //
-
 }
 
 

@@ -41,7 +41,6 @@ public class JwtTokenProvider {
                 .signWith(SignatureAlgorithm.HS512, APP_SECRET).compact();
     }
 
-
     Long getUserIdFromJwt(String token) { //tokenı çöz içerisinden userId yi al tokenlarımızın kim olduğunu tanımamız gerekiyor
         Claims claims = Jwts.parser().setSigningKey(APP_SECRET).parseClaimsJws(token).getBody();
                 return Long.parseLong(claims.getSubject());
